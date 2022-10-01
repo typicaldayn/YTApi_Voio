@@ -9,9 +9,14 @@ import UIKit
 
 class BotPlaylistCell: UICollectionViewCell {
 
+    @IBOutlet weak var viewsCount: UILabel!
+    @IBOutlet weak var videoName: UILabel!
+    @IBOutlet weak var videoImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        videoImage.image = .add
+        
     }
 
 }

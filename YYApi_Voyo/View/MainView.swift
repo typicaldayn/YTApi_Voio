@@ -12,6 +12,8 @@ class MainView: UIViewController {
     @IBOutlet weak var lowerCollectionView: UICollectionView!
     @IBOutlet weak var upperCollectionView: UICollectionView!
     @IBOutlet weak var channelsPages: UIView!
+    @IBOutlet weak var topPlaylistName: UILabel!
+    @IBOutlet weak var botPlaylistName: UILabel!
     
     private var playerViewController: PlayerVC?
     private let playerHeight: CGFloat = 700
