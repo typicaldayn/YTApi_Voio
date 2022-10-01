@@ -1,31 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerVC" customModule="YYApi_Voyo" customModuleProvider="target">
             <connections>
                 <outlet property="arrow" destination="fT4-RM-bIL" id="Z2X-WU-M26"/>
-                <outlet property="gradientView" destination="OoC-XL-p0b" id="rVm-F7-DuG"/>
+                <outlet property="gradientView" destination="miZ-F0-tkR" id="BvP-2d-kDE"/>
                 <outlet property="handleArea" destination="p2c-lx-1rO" id="RUl-aD-EaL"/>
                 <outlet property="view" destination="KDp-XN-mQ2" id="gPl-gk-0Hq"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="KDp-XN-mQ2">
-            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <rect key="frame" x="0.0" y="0.0" width="390" height="835"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoC-XL-p0b" userLabel="Gradient">
-                    <rect key="frame" x="10" y="0.0" width="370" height="844"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="miZ-F0-tkR">
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="835"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </view>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bc5-dH-7pm">
+                    <rect key="frame" x="18" y="770" width="354" height="31"/>
+                    <color key="tintColor" systemColor="placeholderTextColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="jB3-qe-v7M"/>
+                    </constraints>
+                    <imageReference key="minimumValueImage" image="speaker.fill" catalog="system" symbolScale="large"/>
+                    <imageReference key="maximumValueImage" image="speaker.wave.3.fill" catalog="system" symbolScale="large"/>
+                    <color key="minimumTrackTintColor" systemColor="labelColor"/>
+                    <color key="maximumTrackTintColor" systemColor="placeholderTextColor"/>
+                    <color key="thumbTintColor" systemColor="labelColor"/>
+                </slider>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2c-lx-1rO" userLabel="HandleArea">
                     <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
                     <subviews>
@@ -45,22 +59,29 @@
             <viewLayoutGuide key="safeArea" id="PlI-yh-nob"/>
             <color key="backgroundColor" name="BackColor"/>
             <constraints>
-                <constraint firstItem="OoC-XL-p0b" firstAttribute="leading" secondItem="KDp-XN-mQ2" secondAttribute="leading" constant="10" id="DEQ-Nv-DpG"/>
-                <constraint firstItem="OoC-XL-p0b" firstAttribute="top" secondItem="KDp-XN-mQ2" secondAttribute="top" id="O07-yJ-EUP"/>
-                <constraint firstAttribute="bottom" secondItem="OoC-XL-p0b" secondAttribute="bottom" id="Qn8-Ar-fHf"/>
-                <constraint firstItem="p2c-lx-1rO" firstAttribute="top" secondItem="KDp-XN-mQ2" secondAttribute="top" id="ZS9-pI-1op"/>
-                <constraint firstItem="OoC-XL-p0b" firstAttribute="trailing" secondItem="PlI-yh-nob" secondAttribute="trailing" constant="-10" id="cVn-fj-PiD"/>
-                <constraint firstItem="p2c-lx-1rO" firstAttribute="leading" secondItem="PlI-yh-nob" secondAttribute="leading" id="iRQ-eV-Ntv"/>
-                <constraint firstItem="PlI-yh-nob" firstAttribute="trailing" secondItem="p2c-lx-1rO" secondAttribute="trailing" id="lDR-AC-Qu1"/>
+                <constraint firstItem="PlI-yh-nob" firstAttribute="trailing" secondItem="bc5-dH-7pm" secondAttribute="trailing" constant="20" id="031-bu-PTI"/>
+                <constraint firstItem="bc5-dH-7pm" firstAttribute="leading" secondItem="PlI-yh-nob" secondAttribute="leading" constant="20" id="Ek6-kk-YmN"/>
+                <constraint firstItem="p2c-lx-1rO" firstAttribute="top" secondItem="KDp-XN-mQ2" secondAttribute="top" id="KX3-6E-mV4"/>
+                <constraint firstItem="p2c-lx-1rO" firstAttribute="trailing" secondItem="PlI-yh-nob" secondAttribute="trailing" id="T2m-bc-iJe"/>
+                <constraint firstItem="p2c-lx-1rO" firstAttribute="leading" secondItem="PlI-yh-nob" secondAttribute="leading" id="gkC-V0-2qF"/>
+                <constraint firstItem="PlI-yh-nob" firstAttribute="bottom" secondItem="bc5-dH-7pm" secondAttribute="bottom" constant="10" id="ycB-Km-bac"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="167.69230769230768" y="-690.28436018957348"/>
+            <point key="canvasLocation" x="167.69230769230768" y="-687.08530805687201"/>
         </view>
     </objects>
     <resources>
         <image name="chevron.up" catalog="system" width="128" height="70"/>
+        <image name="speaker.fill" catalog="system" width="128" height="125"/>
+        <image name="speaker.wave.3.fill" catalog="system" width="128" height="84"/>
         <namedColor name="BackColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

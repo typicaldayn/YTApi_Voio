@@ -19,6 +19,11 @@
 		BE845BB428E83BF60011AD2F /* ThirdPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE845BB228E83BF60011AD2F /* ThirdPageVC.xib */; };
 		BE845BB728E83C050011AD2F /* FourthPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE845BB528E83C050011AD2F /* FourthPageVC.swift */; };
 		BE845BB828E83C050011AD2F /* FourthPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE845BB628E83C050011AD2F /* FourthPageVC.xib */; };
+		BE8682E528E8893F001D37BC /* TopPlaylistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8682E328E8893F001D37BC /* TopPlaylistCell.swift */; };
+		BE8682E628E8893F001D37BC /* TopPlaylistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8682E428E8893F001D37BC /* TopPlaylistCell.xib */; };
+		BE8682E928E8894F001D37BC /* BotPlaylistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8682E728E8894F001D37BC /* BotPlaylistCell.swift */; };
+		BE8682EA28E8894F001D37BC /* BotPlaylistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8682E828E8894F001D37BC /* BotPlaylistCell.xib */; };
+		BE8682EC28E8897D001D37BC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8682EB28E8897D001D37BC /* Constants.swift */; };
 		BE98C9F228E82EB500BFD314 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE98C9F128E82EB500BFD314 /* AppDelegate.swift */; };
 		BE98C9F428E82EB500BFD314 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE98C9F328E82EB500BFD314 /* SceneDelegate.swift */; };
 		BE98C9F628E82EB500BFD314 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE98C9F528E82EB500BFD314 /* MainView.swift */; };
@@ -40,6 +45,11 @@
 		BE845BB228E83BF60011AD2F /* ThirdPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdPageVC.xib; sourceTree = "<group>"; };
 		BE845BB528E83C050011AD2F /* FourthPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthPageVC.swift; sourceTree = "<group>"; };
 		BE845BB628E83C050011AD2F /* FourthPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourthPageVC.xib; sourceTree = "<group>"; };
+		BE8682E328E8893F001D37BC /* TopPlaylistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPlaylistCell.swift; sourceTree = "<group>"; };
+		BE8682E428E8893F001D37BC /* TopPlaylistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopPlaylistCell.xib; sourceTree = "<group>"; };
+		BE8682E728E8894F001D37BC /* BotPlaylistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotPlaylistCell.swift; sourceTree = "<group>"; };
+		BE8682E828E8894F001D37BC /* BotPlaylistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BotPlaylistCell.xib; sourceTree = "<group>"; };
+		BE8682EB28E8897D001D37BC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BE98C9EE28E82EB500BFD314 /* YYApi_Voyo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYApi_Voyo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE98C9F128E82EB500BFD314 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE98C9F328E82EB500BFD314 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +71,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE18E9EB28E888F500F21B46 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BE8682E328E8893F001D37BC /* TopPlaylistCell.swift */,
+				BE8682E428E8893F001D37BC /* TopPlaylistCell.xib */,
+				BE8682E728E8894F001D37BC /* BotPlaylistCell.swift */,
+				BE8682E828E8894F001D37BC /* BotPlaylistCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		BE845BA628E8345A0011AD2F /* PagesForPagesController */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +133,7 @@
 				BE98C9FC28E82EB600BFD314 /* LaunchScreen.storyboard */,
 				BE98C9FF28E82EB600BFD314 /* Info.plist */,
 				BE18E9E728E8794B00F21B46 /* Extension UIImage.swift */,
+				BE8682EB28E8897D001D37BC /* Constants.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -123,6 +145,7 @@
 				BE98C9F728E82EB500BFD314 /* Main.storyboard */,
 				BE18E9E328E858F100F21B46 /* PlayerVC.swift */,
 				BE18E9E528E85D4900F21B46 /* PlayerVC.xib */,
+				BE18E9EB28E888F500F21B46 /* Cells */,
 				BE98CA0D28E8328800BFD314 /* PagesController */,
 			);
 			path = View;
@@ -213,10 +236,12 @@
 				BE98C9FB28E82EB600BFD314 /* Assets.xcassets in Resources */,
 				BE845BAA28E834AC0011AD2F /* FirstPageVC.xib in Resources */,
 				BE18E9E628E85D4900F21B46 /* PlayerVC.xib in Resources */,
+				BE8682E628E8893F001D37BC /* TopPlaylistCell.xib in Resources */,
 				BE845BB828E83C050011AD2F /* FourthPageVC.xib in Resources */,
 				BE98C9F928E82EB500BFD314 /* Main.storyboard in Resources */,
 				BE845BB028E839240011AD2F /* SecondPageVC.xib in Resources */,
 				BE845BB428E83BF60011AD2F /* ThirdPageVC.xib in Resources */,
+				BE8682EA28E8894F001D37BC /* BotPlaylistCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,9 +254,12 @@
 			files = (
 				BE18E9E828E8794B00F21B46 /* Extension UIImage.swift in Sources */,
 				BE18E9E428E858F100F21B46 /* PlayerVC.swift in Sources */,
+				BE8682E528E8893F001D37BC /* TopPlaylistCell.swift in Sources */,
+				BE8682E928E8894F001D37BC /* BotPlaylistCell.swift in Sources */,
 				BE845BA928E834AC0011AD2F /* FirstPageVC.swift in Sources */,
 				BE845BA528E832F50011AD2F /* PagesController.swift in Sources */,
 				BE98C9F628E82EB500BFD314 /* MainView.swift in Sources */,
+				BE8682EC28E8897D001D37BC /* Constants.swift in Sources */,
 				BE845BB728E83C050011AD2F /* FourthPageVC.swift in Sources */,
 				BE98C9F228E82EB500BFD314 /* AppDelegate.swift in Sources */,
 				BE98C9F428E82EB500BFD314 /* SceneDelegate.swift in Sources */,

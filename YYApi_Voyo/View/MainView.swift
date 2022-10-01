@@ -9,6 +9,8 @@ import UIKit
 
 class MainView: UIViewController {
     
+    @IBOutlet weak var lowerCollectionView: UICollectionView!
+    @IBOutlet weak var upperCollectionView: UICollectionView!
     @IBOutlet weak var channelsPages: UIView!
     
     private var playerViewController: PlayerVC?
@@ -22,13 +24,45 @@ class MainView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPlayer()
+        setUpCollections()
     }
     
     
 }
 
+//MARK: - CollectionViews
+extension MainView: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == upperCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.topPlayilistCell, for: indexPath) as? TopPlaylistCell else { return UICollectionViewCell() }
+            
+            return cell
+        } else if collectionView == lowerCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.botPlaylistCell, for: indexPath) as? BotPlaylistCell else { return UICollectionViewCell() }
+            
+            return cell
+        } else {
+            return UICollectionViewCell()
+        }
+    }
+    
+    private func setUpCollections() {
+        lowerCollectionView.delegate = self
+        lowerCollectionView.dataSource = self
+        upperCollectionView.delegate = self
+        upperCollectionView.dataSource = self
+        
+        lowerCollectionView.register(UINib(nibName: Constants.botPlaylistCell, bundle: nil), forCellWithReuseIdentifier: Constants.botPlaylistCell)
+        upperCollectionView.register(UINib(nibName: Constants.topPlayilistCell, bundle: nil), forCellWithReuseIdentifier: Constants.topPlayilistCell)
+    }
+}
 
-//PlayerView Methods and Properties
+//MARK: - PlayerView Methods and Properties
 extension MainView {
     
     enum PlayerCurrentState {
