@@ -8,7 +8,7 @@
 import UIKit
 
 class PlayerVC: UIViewController {
-
+    
     private lazy var gradient: CAGradientLayer = {
         let gradient = CAGradientLayer()
         gradient.type = .axial
@@ -21,26 +21,15 @@ class PlayerVC: UIViewController {
         return gradient
     }()
 
+    @IBOutlet weak var arrow: UIImageView!
+    @IBOutlet weak var handleArea: UIView!
     @IBOutlet var gradientView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         gradient.frame = gradientView.bounds
         gradient.cornerRadius = 20
         gradientView.layer.addSublayer(gradient)
     }
     
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

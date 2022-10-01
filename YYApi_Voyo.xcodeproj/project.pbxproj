@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BE18E9E428E858F100F21B46 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE18E9E328E858F100F21B46 /* PlayerVC.swift */; };
 		BE18E9E628E85D4900F21B46 /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE18E9E528E85D4900F21B46 /* PlayerVC.xib */; };
+		BE18E9E828E8794B00F21B46 /* Extension UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE18E9E728E8794B00F21B46 /* Extension UIImage.swift */; };
 		BE845BA528E832F50011AD2F /* PagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE845BA428E832F50011AD2F /* PagesController.swift */; };
 		BE845BA928E834AC0011AD2F /* FirstPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE845BA728E834AC0011AD2F /* FirstPageVC.swift */; };
 		BE845BAA28E834AC0011AD2F /* FirstPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE845BA828E834AC0011AD2F /* FirstPageVC.xib */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		BE18E9E328E858F100F21B46 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
 		BE18E9E528E85D4900F21B46 /* PlayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerVC.xib; sourceTree = "<group>"; };
+		BE18E9E728E8794B00F21B46 /* Extension UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension UIImage.swift"; sourceTree = "<group>"; };
 		BE845BA428E832F50011AD2F /* PagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesController.swift; sourceTree = "<group>"; };
 		BE845BA728E834AC0011AD2F /* FirstPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageVC.swift; sourceTree = "<group>"; };
 		BE845BA828E834AC0011AD2F /* FirstPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstPageVC.xib; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				BE98C9FA28E82EB600BFD314 /* Assets.xcassets */,
 				BE98C9FC28E82EB600BFD314 /* LaunchScreen.storyboard */,
 				BE98C9FF28E82EB600BFD314 /* Info.plist */,
+				BE18E9E728E8794B00F21B46 /* Extension UIImage.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE18E9E828E8794B00F21B46 /* Extension UIImage.swift in Sources */,
 				BE18E9E428E858F100F21B46 /* PlayerVC.swift in Sources */,
 				BE845BA928E834AC0011AD2F /* FirstPageVC.swift in Sources */,
 				BE845BA528E832F50011AD2F /* PagesController.swift in Sources */,
