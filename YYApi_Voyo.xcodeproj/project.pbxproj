@@ -10,6 +10,8 @@
 		BE18E9E428E858F100F21B46 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE18E9E328E858F100F21B46 /* PlayerVC.swift */; };
 		BE18E9E628E85D4900F21B46 /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE18E9E528E85D4900F21B46 /* PlayerVC.xib */; };
 		BE18E9E828E8794B00F21B46 /* Extension UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE18E9E728E8794B00F21B46 /* Extension UIImage.swift */; };
+		BE254C9928E8A3B300A2DEEF /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE254C9828E8A3B300A2DEEF /* VideoModel.swift */; };
+		BE4E808728E8CE27006958AA /* YoutubeKit in Frameworks */ = {isa = PBXBuildFile; productRef = BE4E808628E8CE27006958AA /* YoutubeKit */; };
 		BE845BA528E832F50011AD2F /* PagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE845BA428E832F50011AD2F /* PagesController.swift */; };
 		BE845BA928E834AC0011AD2F /* FirstPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE845BA728E834AC0011AD2F /* FirstPageVC.swift */; };
 		BE845BAA28E834AC0011AD2F /* FirstPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE845BA828E834AC0011AD2F /* FirstPageVC.xib */; };
@@ -37,6 +39,7 @@
 		BE18E9E328E858F100F21B46 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
 		BE18E9E528E85D4900F21B46 /* PlayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerVC.xib; sourceTree = "<group>"; };
 		BE18E9E728E8794B00F21B46 /* Extension UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension UIImage.swift"; sourceTree = "<group>"; };
+		BE254C9828E8A3B300A2DEEF /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		BE845BA428E832F50011AD2F /* PagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesController.swift; sourceTree = "<group>"; };
 		BE845BA728E834AC0011AD2F /* FirstPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageVC.swift; sourceTree = "<group>"; };
 		BE845BA828E834AC0011AD2F /* FirstPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstPageVC.xib; sourceTree = "<group>"; };
@@ -67,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE4E808728E8CE27006958AA /* YoutubeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +160,7 @@
 		BE98CA0728E82FE600BFD314 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BE254C9828E8A3B300A2DEEF /* VideoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,6 +198,9 @@
 			dependencies = (
 			);
 			name = YYApi_Voyo;
+			packageProductDependencies = (
+				BE4E808628E8CE27006958AA /* YoutubeKit */,
+			);
 			productName = YYApi_Voyo;
 			productReference = BE98C9EE28E82EB500BFD314 /* YYApi_Voyo.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +229,9 @@
 				Base,
 			);
 			mainGroup = BE98C9E528E82EB400BFD314;
+			packageReferences = (
+				BE4E808528E8CE27006958AA /* XCRemoteSwiftPackageReference "YoutubeKit" */,
+			);
 			productRefGroup = BE98C9EF28E82EB500BFD314 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -268,6 +279,7 @@
 				BE98C9F228E82EB500BFD314 /* AppDelegate.swift in Sources */,
 				BE98C9F428E82EB500BFD314 /* SceneDelegate.swift in Sources */,
 				BE845BB328E83BF60011AD2F /* ThirdPageVC.swift in Sources */,
+				BE254C9928E8A3B300A2DEEF /* VideoModel.swift in Sources */,
 				BE845BAF28E839240011AD2F /* SecondPageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +506,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BE4E808528E8CE27006958AA /* XCRemoteSwiftPackageReference "YoutubeKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rinov/YoutubeKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BE4E808628E8CE27006958AA /* YoutubeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE4E808528E8CE27006958AA /* XCRemoteSwiftPackageReference "YoutubeKit" */;
+			productName = YoutubeKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BE98C9E628E82EB400BFD314 /* Project object */;
 }
