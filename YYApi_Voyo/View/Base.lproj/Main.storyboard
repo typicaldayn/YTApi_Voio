@@ -1,25 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q4x-qS-Gyr">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--YouTube API-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YYApi_Voyo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="yYU-gC-SHV">
+                                <rect key="frame" x="20" y="148" width="350" height="180"/>
+                                <color key="backgroundColor" name="BackColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="A0h-2D-Dbe"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="SLb-x8-bHa" kind="embed" id="6sQ-5B-pz8"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yYU-gC-SHV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="0To-KJ-Sfr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yYU-gC-SHV" secondAttribute="trailing" constant="20" id="PIG-LY-tyv"/>
+                            <constraint firstItem="yYU-gC-SHV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XeF-jJ-wed"/>
+                            <constraint firstItem="yYU-gC-SHV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="a9A-P6-Ila"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="GaS-bk-TRT"/>
+                    <navigationItem key="navigationItem" title="YouTube API" largeTitleDisplayMode="always" id="GaS-bk-TRT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,9 +49,16 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q4x-qS-Gyr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LTI-Cw-neH">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="LTI-Cw-neH">
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="BackColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="TextColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="TextColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -43,8 +69,29 @@
             </objects>
             <point key="canvasLocation" x="140" y="3.5545023696682461"/>
         </scene>
+        <!--Pages Controller-->
+        <scene sceneID="KwU-8W-EwC">
+            <objects>
+                <viewController id="SLb-x8-bHa" customClass="PagesController" customModule="YYApi_Voyo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cwn-26-hHz">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="180"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4WO-he-GZu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UFd-OC-bX1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069" y="-417"/>
+        </scene>
     </scenes>
     <resources>
+        <namedColor name="BackColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.11400000005960464" green="0.10599999874830246" blue="0.14900000393390656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

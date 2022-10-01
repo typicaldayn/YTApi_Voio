@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE845BA528E832F50011AD2F /* PagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE845BA428E832F50011AD2F /* PagesController.swift */; };
+		BE845BA928E834AC0011AD2F /* FirstPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE845BA728E834AC0011AD2F /* FirstPageVC.swift */; };
+		BE845BAA28E834AC0011AD2F /* FirstPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE845BA828E834AC0011AD2F /* FirstPageVC.xib */; };
+		BE845BAF28E839240011AD2F /* SecondPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE845BAD28E839240011AD2F /* SecondPageVC.swift */; };
+		BE845BB028E839240011AD2F /* SecondPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE845BAE28E839240011AD2F /* SecondPageVC.xib */; };
+		BE845BB328E83BF60011AD2F /* ThirdPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE845BB128E83BF60011AD2F /* ThirdPageVC.swift */; };
+		BE845BB428E83BF60011AD2F /* ThirdPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE845BB228E83BF60011AD2F /* ThirdPageVC.xib */; };
+		BE845BB728E83C050011AD2F /* FourthPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE845BB528E83C050011AD2F /* FourthPageVC.swift */; };
+		BE845BB828E83C050011AD2F /* FourthPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE845BB628E83C050011AD2F /* FourthPageVC.xib */; };
 		BE98C9F228E82EB500BFD314 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE98C9F128E82EB500BFD314 /* AppDelegate.swift */; };
 		BE98C9F428E82EB500BFD314 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE98C9F328E82EB500BFD314 /* SceneDelegate.swift */; };
 		BE98C9F628E82EB500BFD314 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE98C9F528E82EB500BFD314 /* ViewController.swift */; };
@@ -16,6 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE845BA428E832F50011AD2F /* PagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesController.swift; sourceTree = "<group>"; };
+		BE845BA728E834AC0011AD2F /* FirstPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageVC.swift; sourceTree = "<group>"; };
+		BE845BA828E834AC0011AD2F /* FirstPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstPageVC.xib; sourceTree = "<group>"; };
+		BE845BAD28E839240011AD2F /* SecondPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageVC.swift; sourceTree = "<group>"; };
+		BE845BAE28E839240011AD2F /* SecondPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondPageVC.xib; sourceTree = "<group>"; };
+		BE845BB128E83BF60011AD2F /* ThirdPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageVC.swift; sourceTree = "<group>"; };
+		BE845BB228E83BF60011AD2F /* ThirdPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdPageVC.xib; sourceTree = "<group>"; };
+		BE845BB528E83C050011AD2F /* FourthPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthPageVC.swift; sourceTree = "<group>"; };
+		BE845BB628E83C050011AD2F /* FourthPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourthPageVC.xib; sourceTree = "<group>"; };
 		BE98C9EE28E82EB500BFD314 /* YYApi_Voyo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYApi_Voyo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE98C9F128E82EB500BFD314 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE98C9F328E82EB500BFD314 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,11 +55,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE845BA628E8345A0011AD2F /* PagesForPagesController */ = {
+			isa = PBXGroup;
+			children = (
+				BE845BA728E834AC0011AD2F /* FirstPageVC.swift */,
+				BE845BA828E834AC0011AD2F /* FirstPageVC.xib */,
+				BE845BAD28E839240011AD2F /* SecondPageVC.swift */,
+				BE845BAE28E839240011AD2F /* SecondPageVC.xib */,
+				BE845BB128E83BF60011AD2F /* ThirdPageVC.swift */,
+				BE845BB228E83BF60011AD2F /* ThirdPageVC.xib */,
+				BE845BB528E83C050011AD2F /* FourthPageVC.swift */,
+				BE845BB628E83C050011AD2F /* FourthPageVC.xib */,
+			);
+			path = PagesForPagesController;
+			sourceTree = "<group>";
+		};
 		BE98C9E528E82EB400BFD314 = {
 			isa = PBXGroup;
 			children = (
 				BE98C9F028E82EB500BFD314 /* YYApi_Voyo */,
-				BE98CA0828E82FEC00BFD314 /* ViewModel */,
 				BE98C9EF28E82EB500BFD314 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,6 +92,7 @@
 				BE98CA0528E82EE200BFD314 /* Supporting Files */,
 				BE98CA0728E82FE600BFD314 /* Model */,
 				BE98CA0628E82FE000BFD314 /* View */,
+				BE98CA0828E82FEC00BFD314 /* ViewModel */,
 			);
 			path = YYApi_Voyo;
 			sourceTree = "<group>";
@@ -81,6 +114,7 @@
 			children = (
 				BE98C9F528E82EB500BFD314 /* ViewController.swift */,
 				BE98C9F728E82EB500BFD314 /* Main.storyboard */,
+				BE98CA0D28E8328800BFD314 /* PagesController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -97,6 +131,15 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BE98CA0D28E8328800BFD314 /* PagesController */ = {
+			isa = PBXGroup;
+			children = (
+				BE845BA428E832F50011AD2F /* PagesController.swift */,
+				BE845BA628E8345A0011AD2F /* PagesForPagesController */,
+			);
+			path = PagesController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,7 +202,11 @@
 			files = (
 				BE98C9FE28E82EB600BFD314 /* LaunchScreen.storyboard in Resources */,
 				BE98C9FB28E82EB600BFD314 /* Assets.xcassets in Resources */,
+				BE845BAA28E834AC0011AD2F /* FirstPageVC.xib in Resources */,
+				BE845BB828E83C050011AD2F /* FourthPageVC.xib in Resources */,
 				BE98C9F928E82EB500BFD314 /* Main.storyboard in Resources */,
+				BE845BB028E839240011AD2F /* SecondPageVC.xib in Resources */,
+				BE845BB428E83BF60011AD2F /* ThirdPageVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,9 +217,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE845BA928E834AC0011AD2F /* FirstPageVC.swift in Sources */,
+				BE845BA528E832F50011AD2F /* PagesController.swift in Sources */,
 				BE98C9F628E82EB500BFD314 /* ViewController.swift in Sources */,
+				BE845BB728E83C050011AD2F /* FourthPageVC.swift in Sources */,
 				BE98C9F228E82EB500BFD314 /* AppDelegate.swift in Sources */,
 				BE98C9F428E82EB500BFD314 /* SceneDelegate.swift in Sources */,
+				BE845BB328E83BF60011AD2F /* ThirdPageVC.swift in Sources */,
+				BE845BAF28E839240011AD2F /* SecondPageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
