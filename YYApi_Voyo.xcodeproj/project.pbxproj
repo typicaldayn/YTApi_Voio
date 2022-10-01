@@ -24,6 +24,7 @@
 		BE8682E928E8894F001D37BC /* BotPlaylistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8682E728E8894F001D37BC /* BotPlaylistCell.swift */; };
 		BE8682EA28E8894F001D37BC /* BotPlaylistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8682E828E8894F001D37BC /* BotPlaylistCell.xib */; };
 		BE8682EC28E8897D001D37BC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8682EB28E8897D001D37BC /* Constants.swift */; };
+		BE8682EE28E89378001D37BC /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8682ED28E89378001D37BC /* MainViewModel.swift */; };
 		BE98C9F228E82EB500BFD314 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE98C9F128E82EB500BFD314 /* AppDelegate.swift */; };
 		BE98C9F428E82EB500BFD314 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE98C9F328E82EB500BFD314 /* SceneDelegate.swift */; };
 		BE98C9F628E82EB500BFD314 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE98C9F528E82EB500BFD314 /* MainView.swift */; };
@@ -50,6 +51,7 @@
 		BE8682E728E8894F001D37BC /* BotPlaylistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotPlaylistCell.swift; sourceTree = "<group>"; };
 		BE8682E828E8894F001D37BC /* BotPlaylistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BotPlaylistCell.xib; sourceTree = "<group>"; };
 		BE8682EB28E8897D001D37BC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BE8682ED28E89378001D37BC /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		BE98C9EE28E82EB500BFD314 /* YYApi_Voyo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYApi_Voyo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE98C9F128E82EB500BFD314 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE98C9F328E82EB500BFD314 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		BE98CA0828E82FEC00BFD314 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BE8682ED28E89378001D37BC /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				BE845BA928E834AC0011AD2F /* FirstPageVC.swift in Sources */,
 				BE845BA528E832F50011AD2F /* PagesController.swift in Sources */,
 				BE98C9F628E82EB500BFD314 /* MainView.swift in Sources */,
+				BE8682EE28E89378001D37BC /* MainViewModel.swift in Sources */,
 				BE8682EC28E8897D001D37BC /* Constants.swift in Sources */,
 				BE845BB728E83C050011AD2F /* FourthPageVC.swift in Sources */,
 				BE98C9F228E82EB500BFD314 /* AppDelegate.swift in Sources */,

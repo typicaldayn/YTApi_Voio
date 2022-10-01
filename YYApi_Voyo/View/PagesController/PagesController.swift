@@ -12,14 +12,27 @@ class PagesController: UIPageViewController {
     private var pages = [UIViewController]()
     private var pageControl = UIPageControl()
     private let initialPage = 0
+    private var currentPage = 0
+    private var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPagesController()
         style()
         layout()
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(changeSlide), userInfo: nil, repeats: true)
     }
     
+    @objc private func changeSlide() {
+        currentPage += 1
+        if currentPage < pages.count {
+            setViewControllers([pages[currentPage]], direction: .forward, animated: true)
+        } else {
+            currentPage = 0
+            setViewControllers([pages[currentPage]], direction: .forward, animated: true)
+        }
+        pageControl.currentPage = currentPage
+    }
 }
 
 extension PagesController {
