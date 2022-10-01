@@ -9,10 +9,13 @@ import UIKit
 
 class ThirdPageVC: UIViewController {
 
+    @IBOutlet weak var channelName: UILabel!
+    @IBOutlet weak var channelSubscribers: UILabel!
+    @IBOutlet weak var channelImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        channelImage.layer.cornerRadius = 10
     }
 
 

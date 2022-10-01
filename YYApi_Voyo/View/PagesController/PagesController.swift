@@ -10,12 +10,14 @@ import UIKit
 class PagesController: UIPageViewController {
     
     private var pages = [UIViewController]()
-    private let pageControl = UIPageControl()
+    private var pageControl = UIPageControl()
     private let initialPage = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPagesController()
+        style()
+        layout()
     }
     
 }
@@ -36,8 +38,7 @@ extension PagesController {
         pages.append(firstPage)
         pages.append(secondPage)
         pages.append(thirdPage)
-        pages.append(fourthPage
-        )
+        pages.append(fourthPage)
         
         setViewControllers([pages[initialPage]], direction: .forward, animated: true)
     }
@@ -60,7 +61,7 @@ extension PagesController {
         
         NSLayoutConstraint.activate([
             pageControl.widthAnchor.constraint(equalTo: view.widthAnchor),
-            pageControl.heightAnchor.constraint(equalToConstant: 450),
+            pageControl.heightAnchor.constraint(equalToConstant: 20),
             view.bottomAnchor.constraint(equalToSystemSpacingBelow: pageControl.bottomAnchor,
                                          multiplier: 1),
         ])

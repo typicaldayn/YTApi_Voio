@@ -9,13 +9,13 @@ import UIKit
 
 class SecondPageVC: UIViewController {
 
+    @IBOutlet weak var channelSubscribers: UILabel!
+    @IBOutlet weak var channelName: UILabel!
+    @IBOutlet weak var channelImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let title = UILabel()
-        view.backgroundColor = .brown
-        title.text = "SECOND"
-        view.addSubview(title)
-        
+        channelImage.layer.cornerRadius = 10
     }
 
 

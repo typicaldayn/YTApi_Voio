@@ -18,27 +18,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="yYU-gC-SHV">
-                                <rect key="frame" x="20" y="148" width="350" height="180"/>
-                                <color key="backgroundColor" name="BackColor"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w4D-Se-qFV">
+                                <rect key="frame" x="0.0" y="143" width="390" height="701"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" id="yYU-gC-SHV">
+                                        <rect key="frame" x="20" y="25" width="350" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="BackColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="A0h-2D-Dbe"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="SLb-x8-bHa" kind="embed" id="6sQ-5B-pz8"/>
+                                        </connections>
+                                    </containerView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lST-0L-5cO">
+                                        <rect key="frame" x="20" y="230" width="350" height="180"/>
+                                        <color key="backgroundColor" name="BackColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="snv-y3-ghA"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bsn-9w-abX">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fhE-xI-0iS">
+                                        <rect key="frame" x="20" y="435" width="350" height="180"/>
+                                        <color key="backgroundColor" name="BackColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="48n-4v-dCT"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RcU-S8-7DN">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45f-zX-zkn">
+                                        <rect key="frame" x="20" y="666.66666666666663" width="350" height="34.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="A0h-2D-Dbe"/>
+                                    <constraint firstItem="fhE-xI-0iS" firstAttribute="trailing" secondItem="yYU-gC-SHV" secondAttribute="trailing" id="13C-Hg-TdQ"/>
+                                    <constraint firstItem="45f-zX-zkn" firstAttribute="trailing" secondItem="yYU-gC-SHV" secondAttribute="trailing" id="BF2-nC-w0M"/>
+                                    <constraint firstItem="45f-zX-zkn" firstAttribute="bottom" secondItem="QYx-9l-iPu" secondAttribute="bottom" id="L92-4U-kRS"/>
+                                    <constraint firstItem="fhE-xI-0iS" firstAttribute="centerX" secondItem="yYU-gC-SHV" secondAttribute="centerX" id="NxI-yi-kf0"/>
+                                    <constraint firstItem="lST-0L-5cO" firstAttribute="top" secondItem="yYU-gC-SHV" secondAttribute="bottom" constant="25" id="OFW-8h-i4A"/>
+                                    <constraint firstItem="fhE-xI-0iS" firstAttribute="top" secondItem="lST-0L-5cO" secondAttribute="bottom" constant="25" id="Oht-3f-HSe"/>
+                                    <constraint firstItem="fhE-xI-0iS" firstAttribute="leading" secondItem="yYU-gC-SHV" secondAttribute="leading" id="XG1-Mc-4kX"/>
+                                    <constraint firstItem="lST-0L-5cO" firstAttribute="leading" secondItem="yYU-gC-SHV" secondAttribute="leading" id="aEj-1f-BQH"/>
+                                    <constraint firstItem="45f-zX-zkn" firstAttribute="centerX" secondItem="yYU-gC-SHV" secondAttribute="centerX" id="bHZ-l8-xIC"/>
+                                    <constraint firstItem="lST-0L-5cO" firstAttribute="centerX" secondItem="yYU-gC-SHV" secondAttribute="centerX" id="e5B-xx-74S"/>
+                                    <constraint firstItem="lST-0L-5cO" firstAttribute="trailing" secondItem="yYU-gC-SHV" secondAttribute="trailing" id="qDQ-Av-gTB"/>
+                                    <constraint firstItem="45f-zX-zkn" firstAttribute="leading" secondItem="yYU-gC-SHV" secondAttribute="leading" id="qqY-3Q-bf9"/>
                                 </constraints>
-                                <connections>
-                                    <segue destination="SLb-x8-bHa" kind="embed" id="6sQ-5B-pz8"/>
-                                </connections>
-                            </containerView>
+                                <viewLayoutGuide key="contentLayoutGuide" id="9p1-DY-jFZ"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="QYx-9l-iPu"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="yYU-gC-SHV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="0To-KJ-Sfr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yYU-gC-SHV" secondAttribute="trailing" constant="20" id="PIG-LY-tyv"/>
-                            <constraint firstItem="yYU-gC-SHV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XeF-jJ-wed"/>
-                            <constraint firstItem="yYU-gC-SHV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="a9A-P6-Ila"/>
-                        </constraints>
+                        <color key="backgroundColor" name="BackColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="YouTube API" largeTitleDisplayMode="always" id="GaS-bk-TRT"/>
+                    <connections>
+                        <outlet property="channelsPages" destination="yYU-gC-SHV" id="0E8-Hb-D8B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,7 +125,7 @@
         <!--Pages Controller-->
         <scene sceneID="KwU-8W-EwC">
             <objects>
-                <viewController id="SLb-x8-bHa" customClass="PagesController" customModule="YYApi_Voyo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="SLb-x8-bHa" customClass="PagesController" customModule="YYApi_Voyo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cwn-26-hHz">
                         <rect key="frame" x="0.0" y="0.0" width="350" height="180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

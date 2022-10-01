@@ -9,10 +9,13 @@ import UIKit
 
 class FirstPageVC: UIViewController {
 
+    @IBOutlet weak var subscribersLabel: UILabel!
+    @IBOutlet weak var channelBannerImage: UIImageView!
+    @IBOutlet weak var channelName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .blue
+        channelBannerImage.layer.cornerRadius = 10
     }
 
 
