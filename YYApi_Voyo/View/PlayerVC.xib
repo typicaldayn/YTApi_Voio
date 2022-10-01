@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerVC" customModule="YYApi_Voyo" customModuleProvider="target">
+            <connections>
+                <outlet property="gradientView" destination="OoC-XL-p0b" id="rVm-F7-DuG"/>
+                <outlet property="view" destination="KDp-XN-mQ2" id="gPl-gk-0Hq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="KDp-XN-mQ2">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoC-XL-p0b" userLabel="Gradient">
+                    <rect key="frame" x="10" y="0.0" width="370" height="844"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2c-lx-1rO">
+                    <rect key="frame" x="148" y="52" width="94" height="70"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fT4-RM-bIL">
+                            <rect key="frame" x="21" y="21.333333333333258" width="52" height="26.999999999999996"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" name="TextColor"/>
+                            <imageReference key="image" image="chevron.up" catalog="system" symbolScale="large"/>
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="xuB-xB-Acf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="PlI-yh-nob"/>
+            <color key="backgroundColor" name="BackColor"/>
+            <constraints>
+                <constraint firstItem="p2c-lx-1rO" firstAttribute="leading" secondItem="PlI-yh-nob" secondAttribute="leading" constant="148" id="9FA-Y7-v6a"/>
+                <constraint firstItem="OoC-XL-p0b" firstAttribute="leading" secondItem="KDp-XN-mQ2" secondAttribute="leading" constant="10" id="DEQ-Nv-DpG"/>
+                <constraint firstItem="OoC-XL-p0b" firstAttribute="top" secondItem="KDp-XN-mQ2" secondAttribute="top" id="O07-yJ-EUP"/>
+                <constraint firstAttribute="bottom" secondItem="OoC-XL-p0b" secondAttribute="bottom" id="Qn8-Ar-fHf"/>
+                <constraint firstItem="p2c-lx-1rO" firstAttribute="centerX" secondItem="KDp-XN-mQ2" secondAttribute="centerX" id="Wdp-Pe-OyM"/>
+                <constraint firstItem="p2c-lx-1rO" firstAttribute="top" secondItem="PlI-yh-nob" secondAttribute="top" constant="5" id="cD0-UT-ran"/>
+                <constraint firstItem="OoC-XL-p0b" firstAttribute="trailing" secondItem="PlI-yh-nob" secondAttribute="trailing" constant="-10" id="cVn-fj-PiD"/>
+                <constraint firstItem="p2c-lx-1rO" firstAttribute="top" secondItem="PlI-yh-nob" secondAttribute="top" constant="5" id="vrX-10-GRq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="167.69230769230768" y="-690.28436018957348"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.up" catalog="system" width="128" height="70"/>
+        <namedColor name="BackColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.11400000005960464" green="0.10599999874830246" blue="0.14900000393390656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
