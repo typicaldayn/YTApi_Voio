@@ -132,7 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				BE98CA0528E82EE200BFD314 /* Supporting Files */,
-				BE98CA0728E82FE600BFD314 /* Model */,
+				BE4E808828E98CEB006958AA /* Networking */,
 				BE98CA0628E82FE000BFD314 /* View */,
 				BE98CA0828E82FEC00BFD314 /* ViewModel */,
 			);
@@ -164,14 +164,6 @@
 				BE98CA0D28E8328800BFD314 /* PagesController */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		BE98CA0728E82FE600BFD314 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				BE4E808828E98CEB006958AA /* Networking */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		BE98CA0828E82FEC00BFD314 /* ViewModel */ = {
@@ -497,7 +489,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sdox.com.YYApi-Voyo";
+				PRODUCT_BUNDLE_IDENTIFIER = "sdox.com.YTApi-Voio";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -529,7 +521,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sdox.com.YYApi-Voyo";
+				PRODUCT_BUNDLE_IDENTIFIER = "sdox.com.YTApi-Voio";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

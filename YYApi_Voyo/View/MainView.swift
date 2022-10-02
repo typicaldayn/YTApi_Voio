@@ -22,10 +22,6 @@ class MainView: UIViewController {
         super.viewDidLoad()
         setupPlayer()
         setUpCollections()
-        let manager = NetworkingManager()
-        manager.fetchPlaylists { res in
-            print(res)
-        }
     }
     
     private func setUpCollections() {

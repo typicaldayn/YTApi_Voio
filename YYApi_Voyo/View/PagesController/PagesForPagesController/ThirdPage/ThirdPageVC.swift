@@ -8,6 +8,8 @@
 import UIKit
 
 class ThirdPageVC: UIViewController, Page {
+    
+    var uploadsPlaylist: [String]?
 
     @IBOutlet weak var channelName: UILabel!
     @IBOutlet weak var channelSubscribers: UILabel!
@@ -16,8 +18,29 @@ class ThirdPageVC: UIViewController, Page {
     override func viewDidLoad() {
         super.viewDidLoad()
         channelImage.layer.cornerRadius = 10
+        channelImage.backgroundColor = .white
+        setThumbNail()
     }
-
+    
+    internal func setThumbNail() {
+        let fetchImageQueue = DispatchQueue(label: "ImageLoader", qos: .userInteractive, attributes: .concurrent)
+        let manager = NetworkingManager()
+        var data: Data = Data()
+        manager.fetchPlaylists(with: "UCqk3CdGN_j8IR9z4uBbVPSg", completion: { result in
+            result.items.forEach { channel in
+                fetchImageQueue.async { [weak self] in
+                guard channel.snippet?.title != nil else { return }
+                guard let url = URL(string: (channel.snippet?.thumbnails.high.url)!) else { return }
+                    data = try! Data(contentsOf: url)
+                    DispatchQueue.main.async {
+                        self?.channelImage.image = UIImage(data: data)
+                        self?.channelName.text = channel.snippet!.title
+                        self?.channelSubscribers.text = channel.statistics!.subscriberCount! + " подписчика"
+                    }
+                }
+            }
+        })
+    }
 
     /*
     // MARK: - Navigation

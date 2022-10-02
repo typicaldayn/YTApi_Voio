@@ -12,4 +12,6 @@ protocol Page: UIViewController {
     var channelSubscribers: UILabel! { get set }
     var channelImage: UIImageView! { get set }
     var channelName: UILabel! { get set }
+    var uploadsPlaylist: [String]? { get set }
+    func setThumbNail()
 }

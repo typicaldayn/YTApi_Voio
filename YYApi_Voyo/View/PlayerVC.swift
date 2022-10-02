@@ -38,14 +38,17 @@ class PlayerVC: UIViewController {
     }
     
     func setPlayer(url: String) {
-        self.player = YTSwiftyPlayer(frame: CGRect(x: 0, y: 65, width: 390, height: 300),
-                                     playerVars: [VideoEmbedParameter.playsInline(true),
-                                                  .loopVideo(true),
-                                                  .videoID(url),
-                                                  .showRelatedVideo(true)])
-        self.player?.autoplay = false
-        self.view.addSubview(self.player!)
-        self.player?.loadDefaultPlayer()
+            self.player = YTSwiftyPlayer(frame: CGRect(x: 0, y: 65, width: 390, height: 300),
+                                         playerVars: [VideoEmbedParameter.playsInline(true),
+                                                      .loopVideo(true),
+                                                      .videoID(url),
+                                                      .showRelatedVideo(true)])
+            self.player?.autoplay = false
+            DispatchQueue.main.async {
+                guard self.player != nil else { fatalError() }
+                self.view.addSubview(self.player!)
+                self.player?.loadDefaultPlayer()
+        }
     }
 }
 

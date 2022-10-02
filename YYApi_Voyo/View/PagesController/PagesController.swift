@@ -14,6 +14,7 @@ class PagesController: UIPageViewController {
     private let initialPage = 0
     private var currentPage = 0
     private var timer: Timer?
+    private var manager: NetworkingManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,21 +22,31 @@ class PagesController: UIPageViewController {
         style()
         layout()
         timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(changeSlide), userInfo: nil, repeats: true)
+        selectPlaylist()
     }
+    
     
     @objc private func changeSlide() {
         currentPage += 1
         if currentPage < pages.count {
-            setViewControllers([pages[currentPage]], direction: .forward, animated: true)
+            setViewControllers([pages[currentPage]], direction: .forward, animated: false)
         } else {
             currentPage = 0
-            setViewControllers([pages[currentPage]], direction: .forward, animated: true)
+            setViewControllers([pages[currentPage]], direction: .forward, animated: false)
         }
         pageControl.currentPage = currentPage
     }
     
     func selectPlaylist() {
-        guard let page = pages[currentPage] as? Page else { return }
+        guard let pages = pages as? [Page] else { return }
+        pages.forEach { page in
+            page.view.setOnClickListener {
+                print("CLICK")
+            }
+//            if page == FirstPageVC() {
+//
+//            }
+        }
         
     }
     
@@ -59,7 +70,7 @@ extension PagesController {
         pages.append(thirdPage)
         pages.append(fourthPage)
         
-        setViewControllers([pages[initialPage]], direction: .forward, animated: true)
+        setViewControllers([pages[initialPage]], direction: .forward, animated: false)
     }
     
     
@@ -107,7 +118,7 @@ extension PagesController: UIPageViewControllerDataSource {
         guard let currentIndex = pages.firstIndex(of: viewController) else { return nil }
         
         if currentIndex < pages.count - 1 {
-            return pages[currentIndex + 1] //next slide
+            return pages[currentIndex + 1]
         } else {
             return pages.first
         }
