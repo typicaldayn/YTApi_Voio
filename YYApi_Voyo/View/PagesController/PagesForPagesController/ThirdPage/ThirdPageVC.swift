@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ThirdPageVC: UIViewController {
+class ThirdPageVC: UIViewController, Page {
 
     @IBOutlet weak var channelName: UILabel!
     @IBOutlet weak var channelSubscribers: UILabel!

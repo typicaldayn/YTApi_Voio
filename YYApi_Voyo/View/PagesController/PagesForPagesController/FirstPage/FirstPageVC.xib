@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_0" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,9 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstPageVC" customModule="YYApi_Voyo" customModuleProvider="target">
             <connections>
-                <outlet property="channelBannerImage" destination="AQY-Am-H9E" id="1za-K6-vMh"/>
+                <outlet property="channelImage" destination="AQY-Am-H9E" id="1za-K6-vMh"/>
                 <outlet property="channelName" destination="9de-5u-Ty8" id="Vf7-4l-FOP"/>
-                <outlet property="subscribersLabel" destination="tCj-fH-hFR" id="NsE-TD-b1d"/>
+                <outlet property="channelSubscribers" destination="tCj-fH-hFR" id="NsE-TD-b1d"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -33,6 +33,12 @@ class PagesController: UIPageViewController {
         }
         pageControl.currentPage = currentPage
     }
+    
+    func selectPlaylist() {
+        guard let page = pages[currentPage] as? Page else { return }
+        
+    }
+    
 }
 
 extension PagesController {

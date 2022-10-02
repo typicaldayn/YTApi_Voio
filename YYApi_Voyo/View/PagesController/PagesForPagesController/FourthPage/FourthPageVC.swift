@@ -1,5 +1,5 @@
 //
-//  FirstPageVC.swift
+//  FourthPageVC.swift
 //  YYApi_Voyo
 //
 //  Created by Stas Bezhan on 01.10.2022.
@@ -7,15 +7,15 @@
 
 import UIKit
 
-class FirstPageVC: UIViewController {
-
-    @IBOutlet weak var subscribersLabel: UILabel!
-    @IBOutlet weak var channelBannerImage: UIImageView!
+class FourthPageVC: UIViewController, Page {
+    
+    @IBOutlet weak var channelSubscribers: UILabel!
     @IBOutlet weak var channelName: UILabel!
+    @IBOutlet weak var channelImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        channelBannerImage.layer.cornerRadius = 10
+        channelImage.layer.cornerRadius = 10
     }
 
 

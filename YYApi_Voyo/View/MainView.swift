@@ -22,6 +22,10 @@ class MainView: UIViewController {
         super.viewDidLoad()
         setupPlayer()
         setUpCollections()
+        let manager = NetworkingManager()
+        manager.fetchPlaylists { res in
+            print(res)
+        }
     }
     
     private func setUpCollections() {
@@ -46,7 +50,7 @@ extension MainView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == upperCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.topPlayilistCell, for: indexPath) as? TopPlaylistCell else { return UICollectionViewCell() }
-            
+            cell.videoImage.image = .add
             return cell
         } else if collectionView == lowerCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.botPlaylistCell, for: indexPath) as? BotPlaylistCell else { return UICollectionViewCell() }
@@ -55,6 +59,10 @@ extension MainView: UICollectionViewDelegate, UICollectionViewDataSource {
         } else {
             return UICollectionViewCell()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        playerViewController?.setPlayer(url: "NIOMtSzfpck")
     }
     
 }
@@ -161,5 +169,5 @@ extension MainView {
             animator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
         }
     }
-  
+    
 }

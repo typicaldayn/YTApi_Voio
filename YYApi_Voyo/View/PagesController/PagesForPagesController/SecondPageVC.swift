@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondPageVC: UIViewController {
+class SecondPageVC: UIViewController, Page {
 
     @IBOutlet weak var channelSubscribers: UILabel!
     @IBOutlet weak var channelName: UILabel!

@@ -7,6 +7,7 @@
 
 import UIKit
 import YoutubeKit
+import Combine
 
 class PlayerVC: UIViewController {
     
@@ -26,6 +27,7 @@ class PlayerVC: UIViewController {
     @IBOutlet weak var arrow: UIImageView!
     @IBOutlet weak var handleArea: UIView!
     @IBOutlet var gradientView: UIView!
+    var result: ChannelListRequest.Response?
     
     override func viewDidLoad() {
         super.viewDidLoad()

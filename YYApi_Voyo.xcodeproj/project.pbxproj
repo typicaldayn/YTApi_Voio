@@ -10,8 +10,8 @@
 		BE18E9E428E858F100F21B46 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE18E9E328E858F100F21B46 /* PlayerVC.swift */; };
 		BE18E9E628E85D4900F21B46 /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE18E9E528E85D4900F21B46 /* PlayerVC.xib */; };
 		BE18E9E828E8794B00F21B46 /* Extension UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE18E9E728E8794B00F21B46 /* Extension UIImage.swift */; };
-		BE254C9928E8A3B300A2DEEF /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE254C9828E8A3B300A2DEEF /* VideoModel.swift */; };
 		BE4E808728E8CE27006958AA /* YoutubeKit in Frameworks */ = {isa = PBXBuildFile; productRef = BE4E808628E8CE27006958AA /* YoutubeKit */; };
+		BE4E808A28E98CFB006958AA /* Networking Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4E808928E98CFB006958AA /* Networking Manager.swift */; };
 		BE845BA528E832F50011AD2F /* PagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE845BA428E832F50011AD2F /* PagesController.swift */; };
 		BE845BA928E834AC0011AD2F /* FirstPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE845BA728E834AC0011AD2F /* FirstPageVC.swift */; };
 		BE845BAA28E834AC0011AD2F /* FirstPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE845BA828E834AC0011AD2F /* FirstPageVC.xib */; };
@@ -33,13 +33,15 @@
 		BE98C9F928E82EB500BFD314 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE98C9F728E82EB500BFD314 /* Main.storyboard */; };
 		BE98C9FB28E82EB600BFD314 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE98C9FA28E82EB600BFD314 /* Assets.xcassets */; };
 		BE98C9FE28E82EB600BFD314 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE98C9FC28E82EB600BFD314 /* LaunchScreen.storyboard */; };
+		BED37B6228E9A03E00A6DE55 /* Extension UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED37B6128E9A03E00A6DE55 /* Extension UIView.swift */; };
+		BED37B6528E9A29C00A6DE55 /* Page Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED37B6428E9A29C00A6DE55 /* Page Protocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BE18E9E328E858F100F21B46 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
 		BE18E9E528E85D4900F21B46 /* PlayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerVC.xib; sourceTree = "<group>"; };
 		BE18E9E728E8794B00F21B46 /* Extension UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension UIImage.swift"; sourceTree = "<group>"; };
-		BE254C9828E8A3B300A2DEEF /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		BE4E808928E98CFB006958AA /* Networking Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Networking Manager.swift"; sourceTree = "<group>"; };
 		BE845BA428E832F50011AD2F /* PagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesController.swift; sourceTree = "<group>"; };
 		BE845BA728E834AC0011AD2F /* FirstPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageVC.swift; sourceTree = "<group>"; };
 		BE845BA828E834AC0011AD2F /* FirstPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstPageVC.xib; sourceTree = "<group>"; };
@@ -63,6 +65,8 @@
 		BE98C9FA28E82EB600BFD314 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE98C9FD28E82EB600BFD314 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE98C9FF28E82EB600BFD314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BED37B6128E9A03E00A6DE55 /* Extension UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension UIView.swift"; sourceTree = "<group>"; };
+		BED37B6428E9A29C00A6DE55 /* Page Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Page Protocol.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,17 +92,22 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		BE4E808828E98CEB006958AA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BE4E808928E98CFB006958AA /* Networking Manager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		BE845BA628E8345A0011AD2F /* PagesForPagesController */ = {
 			isa = PBXGroup;
 			children = (
-				BE845BA728E834AC0011AD2F /* FirstPageVC.swift */,
-				BE845BA828E834AC0011AD2F /* FirstPageVC.xib */,
-				BE845BAD28E839240011AD2F /* SecondPageVC.swift */,
-				BE845BAE28E839240011AD2F /* SecondPageVC.xib */,
-				BE845BB128E83BF60011AD2F /* ThirdPageVC.swift */,
-				BE845BB228E83BF60011AD2F /* ThirdPageVC.xib */,
-				BE845BB528E83C050011AD2F /* FourthPageVC.swift */,
-				BE845BB628E83C050011AD2F /* FourthPageVC.xib */,
+				BED37B6428E9A29C00A6DE55 /* Page Protocol.swift */,
+				BED37B6628E9A2A300A6DE55 /* FirstPage */,
+				BED37B6728E9A2AE00A6DE55 /* SecondPage */,
+				BED37B6828E9A2BB00A6DE55 /* ThirdPage */,
+				BED37B6928E9A2C400A6DE55 /* FourthPage */,
 			);
 			path = PagesForPagesController;
 			sourceTree = "<group>";
@@ -138,7 +147,7 @@
 				BE98C9FA28E82EB600BFD314 /* Assets.xcassets */,
 				BE98C9FC28E82EB600BFD314 /* LaunchScreen.storyboard */,
 				BE98C9FF28E82EB600BFD314 /* Info.plist */,
-				BE18E9E728E8794B00F21B46 /* Extension UIImage.swift */,
+				BED37B6328E9A04300A6DE55 /* Extensions */,
 				BE8682EB28E8897D001D37BC /* Constants.swift */,
 			);
 			path = "Supporting Files";
@@ -160,7 +169,7 @@
 		BE98CA0728E82FE600BFD314 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BE254C9828E8A3B300A2DEEF /* VideoModel.swift */,
+				BE4E808828E98CEB006958AA /* Networking */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +189,51 @@
 				BE845BA628E8345A0011AD2F /* PagesForPagesController */,
 			);
 			path = PagesController;
+			sourceTree = "<group>";
+		};
+		BED37B6328E9A04300A6DE55 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BE18E9E728E8794B00F21B46 /* Extension UIImage.swift */,
+				BED37B6128E9A03E00A6DE55 /* Extension UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BED37B6628E9A2A300A6DE55 /* FirstPage */ = {
+			isa = PBXGroup;
+			children = (
+				BE845BA728E834AC0011AD2F /* FirstPageVC.swift */,
+				BE845BA828E834AC0011AD2F /* FirstPageVC.xib */,
+			);
+			path = FirstPage;
+			sourceTree = "<group>";
+		};
+		BED37B6728E9A2AE00A6DE55 /* SecondPage */ = {
+			isa = PBXGroup;
+			children = (
+				BE845BAD28E839240011AD2F /* SecondPageVC.swift */,
+				BE845BAE28E839240011AD2F /* SecondPageVC.xib */,
+			);
+			name = SecondPage;
+			sourceTree = "<group>";
+		};
+		BED37B6828E9A2BB00A6DE55 /* ThirdPage */ = {
+			isa = PBXGroup;
+			children = (
+				BE845BB128E83BF60011AD2F /* ThirdPageVC.swift */,
+				BE845BB228E83BF60011AD2F /* ThirdPageVC.xib */,
+			);
+			path = ThirdPage;
+			sourceTree = "<group>";
+		};
+		BED37B6928E9A2C400A6DE55 /* FourthPage */ = {
+			isa = PBXGroup;
+			children = (
+				BE845BB528E83C050011AD2F /* FourthPageVC.swift */,
+				BE845BB628E83C050011AD2F /* FourthPageVC.xib */,
+			);
+			path = FourthPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,14 +326,16 @@
 				BE8682E928E8894F001D37BC /* BotPlaylistCell.swift in Sources */,
 				BE845BA928E834AC0011AD2F /* FirstPageVC.swift in Sources */,
 				BE845BA528E832F50011AD2F /* PagesController.swift in Sources */,
+				BE4E808A28E98CFB006958AA /* Networking Manager.swift in Sources */,
+				BED37B6528E9A29C00A6DE55 /* Page Protocol.swift in Sources */,
 				BE98C9F628E82EB500BFD314 /* MainView.swift in Sources */,
 				BE8682EE28E89378001D37BC /* MainViewModel.swift in Sources */,
 				BE8682EC28E8897D001D37BC /* Constants.swift in Sources */,
 				BE845BB728E83C050011AD2F /* FourthPageVC.swift in Sources */,
 				BE98C9F228E82EB500BFD314 /* AppDelegate.swift in Sources */,
 				BE98C9F428E82EB500BFD314 /* SceneDelegate.swift in Sources */,
+				BED37B6228E9A03E00A6DE55 /* Extension UIView.swift in Sources */,
 				BE845BB328E83BF60011AD2F /* ThirdPageVC.swift in Sources */,
-				BE254C9928E8A3B300A2DEEF /* VideoModel.swift in Sources */,
 				BE845BAF28E839240011AD2F /* SecondPageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
