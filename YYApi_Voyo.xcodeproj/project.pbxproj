@@ -115,7 +115,7 @@
 		BE98C9E528E82EB400BFD314 = {
 			isa = PBXGroup;
 			children = (
-				BE98C9F028E82EB500BFD314 /* YYApi_Voyo */,
+				BE98C9F028E82EB500BFD314 /* YTApi_Voio */,
 				BE98C9EF28E82EB500BFD314 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -128,7 +128,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BE98C9F028E82EB500BFD314 /* YYApi_Voyo */ = {
+		BE98C9F028E82EB500BFD314 /* YTApi_Voio */ = {
 			isa = PBXGroup;
 			children = (
 				BE98CA0528E82EE200BFD314 /* Supporting Files */,
@@ -136,7 +136,7 @@
 				BE98CA0628E82FE000BFD314 /* View */,
 				BE98CA0828E82FEC00BFD314 /* ViewModel */,
 			);
-			path = YYApi_Voyo;
+			path = YTApi_Voio;
 			sourceTree = "<group>";
 		};
 		BE98CA0528E82EE200BFD314 /* Supporting Files */ = {
@@ -477,7 +477,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9FL5FRNFVL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "YYApi_Voyo/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "YTApi_Voio/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -509,7 +509,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9FL5FRNFVL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "YYApi_Voyo/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "YTApi_Voio/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -1,5 +1,5 @@
 //
-//  FourthPageVC.swift
+//  ThirdPageVC.swift
 //  YYApi_Voyo
 //
 //  Created by Stas Bezhan on 01.10.2022.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class FourthPageVC: UIViewController, Page {
+class ThirdPageVC: UIViewController, Page {
     
     var uploadsPlaylist: [String]?
-    
-    @IBOutlet weak var channelSubscribers: UILabel!
+
     @IBOutlet weak var channelName: UILabel!
+    @IBOutlet weak var channelSubscribers: UILabel!
     @IBOutlet weak var channelImage: UIImageView!
     
     override func viewDidLoad() {
@@ -22,11 +22,11 @@ class FourthPageVC: UIViewController, Page {
         setThumbNail()
     }
     
-    func setThumbNail() {
+    internal func setThumbNail() {
         let fetchImageQueue = DispatchQueue(label: "ImageLoader", qos: .userInteractive, attributes: .concurrent)
         let manager = NetworkingManager()
         var data: Data = Data()
-        manager.fetchPlaylists(with: "UCGZcFTKIVXJLt1uo1dHfjAQ", completion: { result in
+        manager.fetchPlaylists(with: "UCqk3CdGN_j8IR9z4uBbVPSg", completion: { result in
             result.items.forEach { channel in
                 fetchImageQueue.async { [weak self] in
                 guard channel.snippet?.title != nil else { return }
@@ -34,6 +34,7 @@ class FourthPageVC: UIViewController, Page {
                     data = try! Data(contentsOf: url)
                     DispatchQueue.main.async {
                         self?.channelImage.image = UIImage(data: data)
+                        self?.channelImage.contentMode = .scaleAspectFill
                         self?.channelName.text = channel.snippet!.title
                         self?.channelSubscribers.text = channel.statistics!.subscriberCount! + " подписчика"
                     }
@@ -41,7 +42,6 @@ class FourthPageVC: UIViewController, Page {
             }
         })
     }
-
 
     /*
     // MARK: - Navigation

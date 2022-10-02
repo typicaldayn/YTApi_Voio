@@ -1,5 +1,5 @@
 //
-//  ThirdPageVC.swift
+//  SecondPageVC.swift
 //  YYApi_Voyo
 //
 //  Created by Stas Bezhan on 01.10.2022.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class ThirdPageVC: UIViewController, Page {
+class SecondPageVC: UIViewController, Page {
     
     var uploadsPlaylist: [String]?
 
-    @IBOutlet weak var channelName: UILabel!
     @IBOutlet weak var channelSubscribers: UILabel!
+    @IBOutlet weak var channelName: UILabel!
     @IBOutlet weak var channelImage: UIImageView!
     
     override func viewDidLoad() {
@@ -21,12 +21,12 @@ class ThirdPageVC: UIViewController, Page {
         channelImage.backgroundColor = .white
         setThumbNail()
     }
-    
+
     internal func setThumbNail() {
         let fetchImageQueue = DispatchQueue(label: "ImageLoader", qos: .userInteractive, attributes: .concurrent)
         let manager = NetworkingManager()
         var data: Data = Data()
-        manager.fetchPlaylists(with: "UCqk3CdGN_j8IR9z4uBbVPSg", completion: { result in
+        manager.fetchPlaylists(with: "UCfM3zsQsOnfWNUppiycmBuw", completion: { result in
             result.items.forEach { channel in
                 fetchImageQueue.async { [weak self] in
                 guard channel.snippet?.title != nil else { return }
@@ -34,6 +34,7 @@ class ThirdPageVC: UIViewController, Page {
                     data = try! Data(contentsOf: url)
                     DispatchQueue.main.async {
                         self?.channelImage.image = UIImage(data: data)
+                        self?.channelImage.contentMode = .scaleAspectFill
                         self?.channelName.text = channel.snippet!.title
                         self?.channelSubscribers.text = channel.statistics!.subscriberCount! + " подписчика"
                     }
