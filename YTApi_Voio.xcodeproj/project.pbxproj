@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E7AE68EF6CC9CD890C5FF7F /* Pods_YTApi_Voio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B0BA032A624028CC099D1C /* Pods_YTApi_Voio.framework */; };
 		BE18E9E428E858F100F21B46 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE18E9E328E858F100F21B46 /* PlayerVC.swift */; };
 		BE18E9E628E85D4900F21B46 /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE18E9E528E85D4900F21B46 /* PlayerVC.xib */; };
 		BE18E9E828E8794B00F21B46 /* Extension UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE18E9E728E8794B00F21B46 /* Extension UIImage.swift */; };
@@ -37,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00B0BA032A624028CC099D1C /* Pods_YTApi_Voio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YTApi_Voio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A87E7ECED347623D6FB9E2F6 /* Pods-YTApi_Voio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTApi_Voio.debug.xcconfig"; path = "Target Support Files/Pods-YTApi_Voio/Pods-YTApi_Voio.debug.xcconfig"; sourceTree = "<group>"; };
 		BE18E9E328E858F100F21B46 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
 		BE18E9E528E85D4900F21B46 /* PlayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerVC.xib; sourceTree = "<group>"; };
 		BE18E9E728E8794B00F21B46 /* Extension UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension UIImage.swift"; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		BE98C9FF28E82EB600BFD314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BED37B6128E9A03E00A6DE55 /* Extension UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension UIView.swift"; sourceTree = "<group>"; };
 		BED37B6428E9A29C00A6DE55 /* Page Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Page Protocol.swift"; sourceTree = "<group>"; };
+		F1B5237970801E0A58A0AEC7 /* Pods-YTApi_Voio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTApi_Voio.release.xcconfig"; path = "Target Support Files/Pods-YTApi_Voio/Pods-YTApi_Voio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,12 +77,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E7AE68EF6CC9CD890C5FF7F /* Pods_YTApi_Voio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FD74C4BAE4238E1E9A99FE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A87E7ECED347623D6FB9E2F6 /* Pods-YTApi_Voio.debug.xcconfig */,
+				F1B5237970801E0A58A0AEC7 /* Pods-YTApi_Voio.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BE18E9EB28E888F500F21B46 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +130,8 @@
 			children = (
 				BE98C9F028E82EB500BFD314 /* YTApi_Voio */,
 				BE98C9EF28E82EB500BFD314 /* Products */,
+				1FD74C4BAE4238E1E9A99FE6 /* Pods */,
+				D5CCDA8AA1CDD293ED268F77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,6 +243,14 @@
 			path = FourthPage;
 			sourceTree = "<group>";
 		};
+		D5CCDA8AA1CDD293ED268F77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00B0BA032A624028CC099D1C /* Pods_YTApi_Voio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,17 +258,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE98CA0228E82EB600BFD314 /* Build configuration list for PBXNativeTarget "YTApi_Voio" */;
 			buildPhases = (
+				EE50DCFAE9FA1FB473AF778D /* [CP] Check Pods Manifest.lock */,
 				BE98C9EA28E82EB400BFD314 /* Sources */,
 				BE98C9EB28E82EB400BFD314 /* Frameworks */,
 				BE98C9EC28E82EB400BFD314 /* Resources */,
+				1C032B69F4421154AD3D5C62 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = YTApi_Voio;
-			packageProductDependencies = (
-			);
 			productName = YYApi_Voyo;
 			productReference = BE98C9EE28E82EB500BFD314 /* YTApi_Voio.app */;
 			productType = "com.apple.product-type.application";
@@ -272,8 +297,6 @@
 				Base,
 			);
 			mainGroup = BE98C9E528E82EB400BFD314;
-			packageReferences = (
-			);
 			productRefGroup = BE98C9EF28E82EB500BFD314 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -302,6 +325,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C032B69F4421154AD3D5C62 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YTApi_Voio/Pods-YTApi_Voio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YTApi_Voio/Pods-YTApi_Voio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YTApi_Voio/Pods-YTApi_Voio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE50DCFAE9FA1FB473AF778D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YTApi_Voio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BE98C9EA28E82EB400BFD314 /* Sources */ = {
@@ -466,6 +531,7 @@
 		};
 		BE98CA0328E82EB600BFD314 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A87E7ECED347623D6FB9E2F6 /* Pods-YTApi_Voio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -498,6 +564,7 @@
 		};
 		BE98CA0428E82EB600BFD314 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1B5237970801E0A58A0AEC7 /* Pods-YTApi_Voio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

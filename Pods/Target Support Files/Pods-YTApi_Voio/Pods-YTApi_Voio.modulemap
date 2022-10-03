@@ -1,0 +1,6 @@
+framework module Pods_YTApi_Voio {
+  umbrella header "Pods-YTApi_Voio-umbrella.h"
+
+  export *
+  module * { export * }
+}
