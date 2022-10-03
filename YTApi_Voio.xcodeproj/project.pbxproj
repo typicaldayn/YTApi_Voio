@@ -10,7 +10,6 @@
 		BE18E9E428E858F100F21B46 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE18E9E328E858F100F21B46 /* PlayerVC.swift */; };
 		BE18E9E628E85D4900F21B46 /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE18E9E528E85D4900F21B46 /* PlayerVC.xib */; };
 		BE18E9E828E8794B00F21B46 /* Extension UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE18E9E728E8794B00F21B46 /* Extension UIImage.swift */; };
-		BE4E808728E8CE27006958AA /* YoutubeKit in Frameworks */ = {isa = PBXBuildFile; productRef = BE4E808628E8CE27006958AA /* YoutubeKit */; };
 		BE4E808A28E98CFB006958AA /* Networking Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4E808928E98CFB006958AA /* Networking Manager.swift */; };
 		BE845BA528E832F50011AD2F /* PagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE845BA428E832F50011AD2F /* PagesController.swift */; };
 		BE845BA928E834AC0011AD2F /* FirstPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE845BA728E834AC0011AD2F /* FirstPageVC.swift */; };
@@ -57,7 +56,7 @@
 		BE8682E828E8894F001D37BC /* BotPlaylistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BotPlaylistCell.xib; sourceTree = "<group>"; };
 		BE8682EB28E8897D001D37BC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BE8682ED28E89378001D37BC /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		BE98C9EE28E82EB500BFD314 /* YYApi_Voyo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYApi_Voyo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE98C9EE28E82EB500BFD314 /* YTApi_Voio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTApi_Voio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE98C9F128E82EB500BFD314 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE98C9F328E82EB500BFD314 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BE98C9F528E82EB500BFD314 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -74,7 +73,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE4E808728E8CE27006958AA /* YoutubeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +121,7 @@
 		BE98C9EF28E82EB500BFD314 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE98C9EE28E82EB500BFD314 /* YYApi_Voyo.app */,
+				BE98C9EE28E82EB500BFD314 /* YTApi_Voio.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -231,9 +229,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BE98C9ED28E82EB400BFD314 /* YYApi_Voyo */ = {
+		BE98C9ED28E82EB400BFD314 /* YTApi_Voio */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE98CA0228E82EB600BFD314 /* Build configuration list for PBXNativeTarget "YYApi_Voyo" */;
+			buildConfigurationList = BE98CA0228E82EB600BFD314 /* Build configuration list for PBXNativeTarget "YTApi_Voio" */;
 			buildPhases = (
 				BE98C9EA28E82EB400BFD314 /* Sources */,
 				BE98C9EB28E82EB400BFD314 /* Frameworks */,
@@ -243,12 +241,11 @@
 			);
 			dependencies = (
 			);
-			name = YYApi_Voyo;
+			name = YTApi_Voio;
 			packageProductDependencies = (
-				BE4E808628E8CE27006958AA /* YoutubeKit */,
 			);
 			productName = YYApi_Voyo;
-			productReference = BE98C9EE28E82EB500BFD314 /* YYApi_Voyo.app */;
+			productReference = BE98C9EE28E82EB500BFD314 /* YTApi_Voio.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -266,7 +263,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BE98C9E928E82EB400BFD314 /* Build configuration list for PBXProject "YYApi_Voyo" */;
+			buildConfigurationList = BE98C9E928E82EB400BFD314 /* Build configuration list for PBXProject "YTApi_Voio" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -276,13 +273,12 @@
 			);
 			mainGroup = BE98C9E528E82EB400BFD314;
 			packageReferences = (
-				BE4E808528E8CE27006958AA /* XCRemoteSwiftPackageReference "YoutubeKit" */,
 			);
 			productRefGroup = BE98C9EF28E82EB500BFD314 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BE98C9ED28E82EB400BFD314 /* YYApi_Voyo */,
+				BE98C9ED28E82EB400BFD314 /* YTApi_Voio */,
 			);
 		};
 /* End PBXProject section */
@@ -535,7 +531,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BE98C9E928E82EB400BFD314 /* Build configuration list for PBXProject "YYApi_Voyo" */ = {
+		BE98C9E928E82EB400BFD314 /* Build configuration list for PBXProject "YTApi_Voio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE98CA0028E82EB600BFD314 /* Debug */,
@@ -544,7 +540,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE98CA0228E82EB600BFD314 /* Build configuration list for PBXNativeTarget "YYApi_Voyo" */ = {
+		BE98CA0228E82EB600BFD314 /* Build configuration list for PBXNativeTarget "YTApi_Voio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE98CA0328E82EB600BFD314 /* Debug */,
@@ -554,25 +550,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		BE4E808528E8CE27006958AA /* XCRemoteSwiftPackageReference "YoutubeKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/rinov/YoutubeKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.7.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		BE4E808628E8CE27006958AA /* YoutubeKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BE4E808528E8CE27006958AA /* XCRemoteSwiftPackageReference "YoutubeKit" */;
-			productName = YoutubeKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BE98C9E628E82EB400BFD314 /* Project object */;
 }
