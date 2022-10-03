@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import YoutubeKit
 
 class MainView: UIViewController {
     
@@ -15,15 +16,30 @@ class MainView: UIViewController {
     @IBOutlet weak var topPlaylistName: UILabel!
     @IBOutlet weak var botPlaylistName: UILabel!
     
+    private let manager = NetworkingManager()
     private var viewModel = MainViewModel()
     private var playerViewController: PlayerVC?
+    private var topPlaylistItems = [PlaylistItem]() {
+        didSet {
+            upperCollectionView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.playerHeight = (self.view.frame.height / 4) * 3
-        setupPlayer()
         setUpCollections()
-        
+        setupPlayer()
+        setTopPlaylist()
+    }
+    
+    private func setTopPlaylist() {
+        DispatchQueue(label: "FUCK", qos: .userInteractive, attributes: .concurrent).async {
+            self.manager.fetchTopPlaylist(completion: { response in
+                response.items.forEach { item in
+                    self.topPlaylistItems.append(item)
+                }
+            })
+        }
     }
     
     private func setUpCollections() {
@@ -42,13 +58,19 @@ class MainView: UIViewController {
 extension MainView: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        if collectionView == upperCollectionView {
+            return topPlaylistItems.count
+        } else {
+            return 10
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == upperCollectionView {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.topPlayilistCell, for: indexPath) as? TopPlaylistCell else { return UICollectionViewCell() }
-            cell.videoImage.image = .add
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopPlaylistCell", for: indexPath) as? TopPlaylistCell else { return UICollectionViewCell() }
+            cell.awakeFromNib()
+            cell.title = topPlaylistItems[indexPath.item].snippet.title
+            cell.views = topPlaylistItems[indexPath.row].contentDetails.videoID
             return cell
         } else if collectionView == lowerCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.botPlaylistCell, for: indexPath) as? BotPlaylistCell else { return UICollectionViewCell() }
@@ -80,9 +102,9 @@ extension MainView {
         self.addChild(playerViewController!)
         self.view.addSubview(playerViewController!.view)
         
-        
+        viewModel.playerHeight = (self.view.frame.height / 4) * 3
         playerViewController?.view.frame = CGRect(x: 0, y: self.view.frame.height - viewModel.playerHandleArea, width: self.view.frame.width, height: viewModel.playerHeight)
-        playerViewController?.setPlayer(url: "bsM1qdGAVbU")
+        playerViewController?.setPlayer(url: "gNimXZ--6QU")
         playerViewController?.setBackground()
         playerViewController?.view.clipsToBounds = true
         
