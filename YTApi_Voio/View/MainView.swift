@@ -61,6 +61,10 @@ extension MainView: UICollectionViewDelegate, UICollectionViewDataSource {
         playerViewController?.setPlayer(url: "NIOMtSzfpck")
     }
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
 }
 
 //MARK: - PlayerView Methods and Properties
