@@ -7,38 +7,23 @@
 
 import UIKit
 import YoutubeKit
-import Combine
+import GradientViewExtension
 
 class PlayerVC: UIViewController {
     
     private var player: YTSwiftyPlayer?
-    private lazy var gradient: CAGradientLayer = {
-        let gradient = CAGradientLayer()
-        gradient.type = .axial
-        gradient.colors = [
-            UIColor(red: 234 / 255, green: 65 / 255, blue: 140 / 255, alpha: 1).cgColor,
-            UIColor(red: 156 / 255, green: 34 / 255, blue: 201 / 255, alpha: 1).cgColor,
-            UIColor(red: 116 / 255, green: 18 / 255, blue: 232 / 255, alpha: 1).cgColor
-        ]
-        gradient.locations = [0, 0.5, 1]
-        return gradient
-    }()
     
     @IBOutlet weak var arrow: UIImageView!
     @IBOutlet weak var handleArea: UIView!
-    @IBOutlet var gradientView: UIView!
     var result: ChannelListRequest.Response?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gradient.frame = gradientView.bounds
-        gradient.cornerRadius = 20
-        gradientView.layer.addSublayer(gradient)
-        setPlayer(url: "bsM1qdGAVbU")
+    
     }
     
     func setPlayer(url: String) {
-            self.player = YTSwiftyPlayer(frame: CGRect(x: 0, y: 65, width: 390, height: 300),
+        self.player = YTSwiftyPlayer(frame: CGRect(x: 0, y: 65, width: view.frame.width, height: 300),
                                          playerVars: [VideoEmbedParameter.playsInline(true),
                                                       .loopVideo(true),
                                                       .videoID(url),
@@ -49,6 +34,14 @@ class PlayerVC: UIViewController {
                 self.view.addSubview(self.player!)
                 self.player?.loadDefaultPlayer()
         }
+    }
+    
+    func setBackground() {
+        self.view.layer.cornerRadius = 20
+        var gradient = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+        gradient.setGradientBackground(startColor: UIColor.purple, endColor: UIColor(red: 116 / 255, green: 18 / 255, blue: 232 / 255, alpha: 1))
+        
+        self.view.layer.addSublayer(gradient.layer)
     }
 }
 

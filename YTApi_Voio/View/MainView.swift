@@ -20,8 +20,10 @@ class MainView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.playerHeight = (self.view.frame.height / 4) * 3
         setupPlayer()
         setUpCollections()
+        
     }
     
     private func setUpCollections() {
@@ -78,7 +80,10 @@ extension MainView {
         self.addChild(playerViewController!)
         self.view.addSubview(playerViewController!.view)
         
-        playerViewController?.view.frame = CGRect(x: 0, y: self.view.frame.height - viewModel.playerHandleArea, width: self.view.bounds.width, height: viewModel.playerHeight)
+        
+        playerViewController?.view.frame = CGRect(x: 0, y: self.view.frame.height - viewModel.playerHandleArea, width: self.view.frame.width, height: viewModel.playerHeight)
+        playerViewController?.setPlayer(url: "bsM1qdGAVbU")
+        playerViewController?.setBackground()
         playerViewController?.view.clipsToBounds = true
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapToOpenPlayer(_:)))

@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-YTApi_Voio/Pods-YTApi_Voio-frameworks.sh
+${BUILT_PRODUCTS_DIR}/GradientViewExtension/GradientViewExtension.framework
 ${BUILT_PRODUCTS_DIR}/YoutubeKit/YoutubeKit.framework

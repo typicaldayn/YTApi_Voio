@@ -7,5 +7,6 @@ target 'YTApi_Voio' do
 
   # Pods for YTApi_Voio
 pod 'YoutubeKit' 
+pod 'GradientViewExtension', '~> 0.0.1'
 
 end

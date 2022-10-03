@@ -1,16 +1,20 @@
 PODS:
+  - GradientViewExtension (0.0.1)
   - YoutubeKit (0.7.0)
 
 DEPENDENCIES:
+  - GradientViewExtension (~> 0.0.1)
   - YoutubeKit
 
 SPEC REPOS:
   trunk:
+    - GradientViewExtension
     - YoutubeKit
 
 SPEC CHECKSUMS:
+  GradientViewExtension: 13bc3f9584bb4124a95bfccd34996f2649cedd1f
   YoutubeKit: 5cb09f2a58fc21c9cd7c7d8e694745e65e5e48da
 
-PODFILE CHECKSUM: e7824045c9a447674562320860585fc1165f89c4
+PODFILE CHECKSUM: fab370c233b9c57d7262bbde70181182b22956ea
 
 COCOAPODS: 1.11.3

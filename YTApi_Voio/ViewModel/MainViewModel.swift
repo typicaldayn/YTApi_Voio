@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewModel {
+class MainViewModel: NSObject {
     
     enum PlayerCurrentState {
         case expanded
@@ -16,7 +16,7 @@ class MainViewModel {
     
     var progressOfAnimation: CGFloat = 0
     let playerHandleArea: CGFloat = 60
-    let playerHeight: CGFloat = 700
+    var playerHeight: CGFloat = 700
     var playerVisible = false
     var nextState: PlayerCurrentState {
         return playerVisible ? .collapse : .expanded
