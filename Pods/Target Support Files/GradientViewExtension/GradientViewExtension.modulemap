@@ -1,0 +1,6 @@
+framework module GradientViewExtension {
+  umbrella header "GradientViewExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}

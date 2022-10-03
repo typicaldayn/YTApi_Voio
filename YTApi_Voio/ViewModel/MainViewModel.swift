@@ -24,4 +24,5 @@ class MainViewModel: NSObject {
     var runningAnimations = [UIViewPropertyAnimator]()
     var visualEffectView: UIVisualEffectView?
    
+    
 }

@@ -13,9 +13,14 @@ class TopPlaylistCell: UICollectionViewCell {
     @IBOutlet weak var videoName: UILabel!
     @IBOutlet weak var videoImage: UIImageView!
     
+    var views: String = ""
+    var image: UIImage?
+    var title: String = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        videoImage.image = .strokedCheckmark
+        viewsCount.text = views
+        videoName.text = title
     }
 
 }

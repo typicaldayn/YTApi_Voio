@@ -12,6 +12,7 @@
 		BE18E9E628E85D4900F21B46 /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE18E9E528E85D4900F21B46 /* PlayerVC.xib */; };
 		BE18E9E828E8794B00F21B46 /* Extension UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE18E9E728E8794B00F21B46 /* Extension UIImage.swift */; };
 		BE4E808A28E98CFB006958AA /* Networking Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4E808928E98CFB006958AA /* Networking Manager.swift */; };
+		BE518FF228EC570000436D38 /* player.html in Resources */ = {isa = PBXBuildFile; fileRef = BE518FF128EC570000436D38 /* player.html */; };
 		BE845BA528E832F50011AD2F /* PagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE845BA428E832F50011AD2F /* PagesController.swift */; };
 		BE845BA928E834AC0011AD2F /* FirstPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE845BA728E834AC0011AD2F /* FirstPageVC.swift */; };
 		BE845BAA28E834AC0011AD2F /* FirstPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE845BA828E834AC0011AD2F /* FirstPageVC.xib */; };
@@ -44,6 +45,7 @@
 		BE18E9E528E85D4900F21B46 /* PlayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerVC.xib; sourceTree = "<group>"; };
 		BE18E9E728E8794B00F21B46 /* Extension UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension UIImage.swift"; sourceTree = "<group>"; };
 		BE4E808928E98CFB006958AA /* Networking Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Networking Manager.swift"; sourceTree = "<group>"; };
+		BE518FF128EC570000436D38 /* player.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = player.html; path = Pods/YoutubeKit/YoutubeKit/Resources/player.html; sourceTree = SOURCE_ROOT; };
 		BE845BA428E832F50011AD2F /* PagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesController.swift; sourceTree = "<group>"; };
 		BE845BA728E834AC0011AD2F /* FirstPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageVC.swift; sourceTree = "<group>"; };
 		BE845BA828E834AC0011AD2F /* FirstPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstPageVC.xib; sourceTree = "<group>"; };
@@ -90,7 +92,6 @@
 				A87E7ECED347623D6FB9E2F6 /* Pods-YTApi_Voio.debug.xcconfig */,
 				F1B5237970801E0A58A0AEC7 /* Pods-YTApi_Voio.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -157,6 +158,7 @@
 		BE98CA0528E82EE200BFD314 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BE518FF128EC570000436D38 /* player.html */,
 				BE98C9F128E82EB500BFD314 /* AppDelegate.swift */,
 				BE98C9F328E82EB500BFD314 /* SceneDelegate.swift */,
 				BE98C9FA28E82EB600BFD314 /* Assets.xcassets */,
@@ -313,6 +315,7 @@
 			files = (
 				BE98C9FE28E82EB600BFD314 /* LaunchScreen.storyboard in Resources */,
 				BE98C9FB28E82EB600BFD314 /* Assets.xcassets in Resources */,
+				BE518FF228EC570000436D38 /* player.html in Resources */,
 				BE845BAA28E834AC0011AD2F /* FirstPageVC.xib in Resources */,
 				BE18E9E628E85D4900F21B46 /* PlayerVC.xib in Resources */,
 				BE8682E628E8893F001D37BC /* TopPlaylistCell.xib in Resources */,
